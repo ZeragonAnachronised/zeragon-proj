@@ -1,0 +1,42 @@
+# Build output
+/build/
+/out/
+/*.jar
+/*.war
+/*.class
+
+# Gradle
+.gradle/
+gradle/
+!/gradle/wrapper/gradle-wrapper.properties # Сохраняем wrapper
+
+# IDE
+*.iml
+*.ipr
+*.iws
+.idea/
+.vscode/
+.settings/
+.target/
+
+# Logs and temp files
+*.log
+*.tmp
+*/temp/
+*/logs/
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# Environment files
+.env
+.env.local
+.env.development
+.env.test
+.env.production
+
+# Maven
+/mvnw*
+mvn*
+*.m2/
