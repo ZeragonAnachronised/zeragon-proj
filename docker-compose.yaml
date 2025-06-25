@@ -1,16 +1,16 @@
 services:
-  springboot-app:
+  forum:
     build: .
     ports:
       - "8080:8080"
     environment:
-      SPRING_DATASOURCE_URL: jdbc:postgresql://db:5432/zeragon-db
+      SPRING_DATASOURCE_URL: jdbc:postgresql://zeragon-db:5432/zeragon-db
       SPRING_DATASOURCE_USERNAME: postgres
       SPRING_DATASOURCE_PASSWORD: 13415968273
     depends_on:
-      - db
+      - zeragon-db
 
-  db:
+  zeragon-db:
     image: postgres:latest
     environment:
       POSTGRES_DB: zeragon-db
