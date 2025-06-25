@@ -1,6 +1,7 @@
 package com.zeragon.forum.controller;
 
 import com.zeragon.forum.model.User;
+import com.zeragon.forum.model.UserDTO;
 import com.zeragon.forum.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -15,7 +16,7 @@ public class UserController {
     private UserService userService;
 
     @GetMapping
-    public List<User> getAllUsers() {
+    public List<UserDTO> getAllUsers() {
         return userService.getAllUsers();
     }
 
