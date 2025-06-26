@@ -3,6 +3,7 @@ package com.zeragon.forum.service;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.util.UUID;
 
 import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
@@ -17,7 +18,7 @@ public class FileService {
             Files.createDirectories(rootLocation);
 
             Path destinationFile = this.rootLocation.resolve(
-                    Paths.get(file.getOriginalFilename())).normalize().toAbsolutePath();
+                    Paths.get(UUID.randomUUID() + "-" + file.getOriginalFilename())).normalize().toAbsolutePath();
 
             file.transferTo(destinationFile);
         } catch (Exception e) {
